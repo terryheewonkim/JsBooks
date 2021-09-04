@@ -42,7 +42,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ initialValue, onChange }) => {
     );
 
     highlighter.highLightOnDidChangeModelContent(
-      () => {},
+      100,
       () => {},
       () => {},
       undefined,
