@@ -1,6 +1,6 @@
 {
   "name": "js-notepen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "publishConfig": {
     "access": "public"
@@ -17,10 +17,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@js-notepen/local-client": "^1.0.0"
+    "@js-notepen/local-client": "^1.0.1"
   },
   "devDependencies": {
-    "@js-notepen/local-api": "^1.0.0",
+    "@js-notepen/local-api": "^1.0.1",
     "@types/node": "^16.7.10",
     "commander": "^8.1.0",
     "esbuild": "0.8.26",
