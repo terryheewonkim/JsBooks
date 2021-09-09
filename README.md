@@ -1,18 +1,18 @@
-# js-pen CLI Tool
+# js-notepen CLI Tool
 
 This is a CLI to launch an interactive development environment for writing and documenting code for Javascript in a browser. Users can add code or text cells, and save their work into a local file.
 
-This project was created with create-react-app and was bootstrapped with Lerna. @js-pen/local-api and @js-pen/local-client are required dependencies to the CLI.
+This project was created with create-react-app and was bootstrapped with Lerna. @js-notepen/local-api and @js-notepen/local-client are required dependencies to the CLI.
 
 ## Installing/Running
 
 In your preferred command line tool, to install:
 
-### `npm install -g js-pen`
+### `npm install -g js-notepen`
 
 To run directly:
 
-### `npx js-pen serve`
+### `npx js-notepen serve`
 
 Open [http://localhost:4005](http://localhost:4005) to view the project in the browser.
 
@@ -20,7 +20,7 @@ Open [http://localhost:4005](http://localhost:4005) to view the project in the b
 
 The command accepts optional port field or specific file that you want to open:
 
-### `npx js-pen serve [filename] [-p portNum]`
+### `npx js-notepen serve [filename] [-p portNum]`
 
 ## Displaying Code in the Preview Window
 

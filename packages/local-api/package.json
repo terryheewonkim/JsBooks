@@ -1,5 +1,5 @@
 {
-  "name": "@js-pen/local-api",
+  "name": "@js-notepen/local-api",
   "version": "1.0.0",
   "description": "",
   "publishConfig": {
@@ -23,9 +23,10 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@js-pen/local-client": "^1.0.0",
+    "@js-notepen/local-client": "^1.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "http-proxy-middleware": "^2.0.1"
-  }
+  },
+  "gitHead": "9230d0509bdae1d2e7ed53a5a8cd4b8c62c6b4b6"
 }

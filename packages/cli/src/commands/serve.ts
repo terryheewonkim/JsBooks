@@ -1,6 +1,6 @@
 import path from 'path';
 import { Command } from 'commander';
-import { serve } from '@js-pen/local-api';
+import { serve } from '@js-notepen/local-api';
 
 /*
   The following interface and function is a type guard for Node.js defined errors.

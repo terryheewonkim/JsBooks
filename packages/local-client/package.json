@@ -1,5 +1,5 @@
 {
-  "name": "@js-pen/local-client",
+  "name": "@js-notepen/local-client",
   "version": "1.0.0",
   "publishConfig": {
     "access": "public"
@@ -66,5 +66,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "gitHead": "9230d0509bdae1d2e7ed53a5a8cd4b8c62c6b4b6"
 }
