@@ -56,6 +56,6 @@ import 'bulma/css/bulma.css';
 
 This application by default saves all code/notes written by the user into a file called 'notebook.js' in JSON format, if a file to open was not specified when the `serve` command was first ran in the command line tool.
 
-## Disclaimer on JSX Syntax Highlighting
+### Disclaimer on JSX Syntax Highlighting
 
 This project uses an untested package for JSX syntax highlighting that may break over time, but this does _not_ affect the overall functionality of the application.
