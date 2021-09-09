@@ -46,6 +46,23 @@ var path_1 = __importDefault(require("path"));
 var isNodeError = function (e) {
     return e !== undefined;
 };
+var defaultFileContent = [
+    {
+        id: 'aaaaa',
+        type: 'text',
+        content: "# js-pen\nThis is an interactive coding environment. You can write Javascript, see it executed, and write comprehensive documentation using markdown.\n- Click any text cell (including this one) to edit it\n- The code in each code editor is all joined together into one file. If you define a variable in cell #1, you can refer to it in any following cell!\n- You can show any React component, string, number, or anything else by calling the `show` function. This is a function built into this environment. Call show multiple times to show multiple values\n- Re-order or delete cells using the buttons on the top right\n- Add new cells by hovering on the divider between each cell\n- Format your code by clicking on the format button on the top right of the editor\nAll of your changes get saved to the file you opend js-pen with. So if you ran `npx js-pen serve test.js`, all of the text and code you write will be saved to the `test.js` file.\n\nA default file of `notebook.js` will be created (located within js-pen/packages/cli/dist) if a file isn't specified when the application is first ran.",
+    },
+    {
+        id: 'bbbbb',
+        type: 'code',
+        content: "import { useState } from 'react';\r\n\r\nconst Counter = () => {\r\n  const [count, setCount] = useState(0);\r\n  return (\r\n    <div>\r\n      <button onClick={() => setCount(count + 1)}>Click</button>\r\n      <h3>Count: {count}</h3>\r\n    </div>\r\n  )\r\n}\r\n// Display any variable or React Component by calling 'show'\r\nshow(<Counter />);",
+    },
+    {
+        id: 'ccccc',
+        type: 'code',
+        content: 'const App = () => {\n  return (\n    <div>\n      <h3>Hello World!</h3>\n      <i>Counter component will be rendered below</i>\n      <hr />\n      {/* Counter was declared in an earlier cell - can be referenced here! */}\n      <Counter />\n    </div>\n  );\n};\nshow(<App />);',
+    },
+];
 var createCellsRouter = function (filename, dir) {
     var router = express_1.default.Router();
     router.use(express_1.default.json());
@@ -65,10 +82,10 @@ var createCellsRouter = function (filename, dir) {
                     err_1 = _a.sent();
                     if (!isNodeError(err_1)) return [3 /*break*/, 5];
                     if (!(err_1.code === 'ENOENT')) return [3 /*break*/, 4];
-                    return [4 /*yield*/, promises_1.default.writeFile(fullPath, '[]', 'utf-8')];
+                    return [4 /*yield*/, promises_1.default.writeFile(fullPath, JSON.stringify(defaultFileContent), 'utf-8')];
                 case 3:
                     _a.sent();
-                    res.send([]);
+                    res.send(defaultFileContent);
                     _a.label = 4;
                 case 4: return [3 /*break*/, 6];
                 case 5: throw err_1;
